@@ -8,3 +8,7 @@ Para automatizar esse processo, instale:
 - o pacote: npm i -g ts-node
 - a extenção Code Runner no VS Code
 Depois de instalar, utilize o atalho Ctrl + Alt + N para fazer o processamento
+
+Ou ainda é possível usar: "tsc -w" para monitorar o diretório e quando ocorrer
+alguma mudança em arquivos .ts, esses já serão transformados em js. É possível,
+pra esse caso, usar um live server para visualizar as mudanças no browser.
