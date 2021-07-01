@@ -1,0 +1,23 @@
+"use strict";
+var nome = "João";
+console.log(nome);
+var idade = 27;
+idade = 27.5;
+var umaFlag = true;
+var id;
+id = 123;
+id = "Meu Id é 123";
+var hobbies = ["Cozinhar", "Praticar Esportes", true];
+hobbies = [100];
+var endereco = ["Av. Principal", 123];
+var Cor;
+(function (Cor) {
+    Cor[Cor["cinza"] = 0] = "cinza";
+    Cor[Cor["verde"] = 1] = "verde";
+    Cor[Cor["azul"] = 100] = "azul";
+    Cor[Cor["laranja"] = 101] = "laranja";
+    Cor[Cor["amarelo"] = 0] = "amarelo";
+    Cor[Cor["vermelho"] = 1] = "vermelho";
+})(Cor || (Cor = {}));
+var minhaCor = Cor.vermelho;
+console.log(minhaCor);
