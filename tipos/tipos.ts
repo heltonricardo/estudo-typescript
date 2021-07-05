@@ -85,16 +85,16 @@ let funcionario: {
     return hora <= 8 ? "Ponto normal" : "Fora do horário";
   },
 };
-console.log(funcionario.supervisores)
-console.log(funcionario.baterPonto(7))
-console.log(funcionario.baterPonto(9))
+console.log(funcionario.supervisores);
+console.log(funcionario.baterPonto(7));
+console.log(funcionario.baterPonto(9));
 
 /******************************* CRIANDO TIPOS ********************************/
 
 type Funcionario = {
   supervisores: string[];
   baterPonto: (h: number) => string;
-}
+};
 
 let funcionario1: Funcionario = {
   supervisores: ["Valdir", "Carlos", "Felipe"],
@@ -103,3 +103,10 @@ let funcionario1: Funcionario = {
   },
 };
 
+/*********************************** UNION ************************************/
+
+let nota: number | string;
+nota = 10;
+console.log(`Minha nota é ${nota}`);
+nota = "10";
+console.log(`Minha nota é ${nota}`);
