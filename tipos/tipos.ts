@@ -62,3 +62,14 @@ let calculo: (a: number, b: number) => number;
 // calculo = digaOi -> erro
 calculo = multiplicar;
 console.log(calculo(2, 3));
+
+// objetos
+let usuario: {nome: string, senha: string} = {
+  senha: "123456",
+  nome: "Ricardo",
+};
+
+// usuario = {}
+// usuario = { name: "Ricardo", pass: "123456"}
+// Depois de criado, um objeto deve sempre respeitar os nomes e tipos de
+// proriedades que foram definidas em sua declaração
