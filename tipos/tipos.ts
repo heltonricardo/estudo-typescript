@@ -64,7 +64,7 @@ calculo = multiplicar;
 console.log(calculo(2, 3));
 
 // objetos
-let usuario: {nome: string, senha: string} = {
+let usuario: { nome: string; senha: string } = {
   senha: "123456",
   nome: "Ricardo",
 };
@@ -73,3 +73,17 @@ let usuario: {nome: string, senha: string} = {
 // usuario = { name: "Ricardo", pass: "123456"}
 // Depois de criado, um objeto deve sempre respeitar os nomes e tipos de
 // proriedades que foram definidas em sua declaração
+
+// Desafio objeto:
+let funcionario: {
+  supervisores: string[];
+  baterPonto: (h: number) => string;
+} = {
+  supervisores: ["Valdir", "Carlos", "Felipe"],
+  baterPonto(hora: number): string {
+    return hora <= 8 ? "Ponto normal" : "Fora do horário";
+  },
+};
+console.log(funcionario.supervisores)
+console.log(funcionario.baterPonto(7))
+console.log(funcionario.baterPonto(9))
