@@ -123,7 +123,7 @@ const produto = {
   nome: "Sabão",
   preco: 1,
   validarProduto() {
-    if ((!this.nome || this.nome.trim().length === 0)) {
+    if (!this.nome || this.nome.trim().length === 0) {
       falha("Precisa ter um nome");
     }
     if (this.preco <= 0) {
@@ -136,20 +136,49 @@ produto.validarProduto();
 /********************************* TIPO NULO **********************************/
 
 // Um valor só poderá ser nulo caso declaremos esse tipo:
-let altura: number | null
-altura = 13
-altura = null
+let altura: number | null;
+altura = 13;
+altura = null;
 
 type Contato = {
-  nome: string,
-  tel1: string,
-  tel2: string | null
-}
+  nome: string;
+  tel1: string;
+  tel2: string | null;
+};
 
 const contato1: Contato = {
   nome: "Fulano",
   tel1: "987654321",
-  tel2: null
+  tel2: null,
+};
+
+let podeSerNulo = null; // Recebe o tipo any por padrão
+
+/************************ DESAFIO: CONVERTENDO PARA TS ************************/
+
+type ContaBancaria = {
+  saldo: number;
+  depositar: (n: number) => void;
+};
+
+type Correntista = {
+  nome: string,
+  contaBancaria: ContaBancaria,
+  contatos: string[]
 }
 
-let podeSerNulo = null // Recebe o tipo any por padrão
+let contaBancaria: ContaBancaria = {
+  saldo: 3456,
+  depositar(valor: number) {
+    this.saldo += valor;
+  },
+};
+
+let correntista: Correntista = {
+  nome: "Ana Silva",
+  contaBancaria: contaBancaria,
+  contatos: ["34567890", "98765432"],
+};
+
+correntista.contaBancaria.depositar(3000);
+console.log(correntista);
