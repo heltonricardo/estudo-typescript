@@ -132,3 +132,24 @@ const produto = {
   },
 };
 produto.validarProduto();
+
+/********************************* TIPO NULO **********************************/
+
+// Um valor só poderá ser nulo caso declaremos esse tipo:
+let altura: number | null
+altura = 13
+altura = null
+
+type Contato = {
+  nome: string,
+  tel1: string,
+  tel2: string | null
+}
+
+const contato1: Contato = {
+  nome: "Fulano",
+  tel1: "987654321",
+  tel2: null
+}
+
+let podeSerNulo = null // Recebe o tipo any por padrão
