@@ -63,7 +63,8 @@ let calculo: (a: number, b: number) => number;
 calculo = multiplicar;
 console.log(calculo(2, 3));
 
-// objetos
+/********************************** OBJETOS ***********************************/
+
 let usuario: { nome: string; senha: string } = {
   senha: "123456",
   nome: "Ricardo",
@@ -87,3 +88,18 @@ let funcionario: {
 console.log(funcionario.supervisores)
 console.log(funcionario.baterPonto(7))
 console.log(funcionario.baterPonto(9))
+
+/******************************* CRIANDO TIPOS ********************************/
+
+type Funcionario = {
+  supervisores: string[];
+  baterPonto: (h: number) => string;
+}
+
+let funcionario1: Funcionario = {
+  supervisores: ["Valdir", "Carlos", "Felipe"],
+  baterPonto(hora: number): string {
+    return hora <= 8 ? "Ponto normal" : "Fora do horário";
+  },
+};
+
