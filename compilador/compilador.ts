@@ -14,3 +14,12 @@ let inscritos: number = 350000
 
 canal = inscritos
 console.log(canal)
+
+/* A propriedade "target" no tsconfig, refere-se para qual versão do JavaScript
+ * os arquivos TS serão convertidos. Não muda muita coisa mexer nessa
+ * propriedade pois o TS consegue converter até para versões bem antigas e, além
+ * disso, hoje praticamente todas as plataformas suportam as versões mais
+ * recentes do JS. O que pode impactar de fato é o tamanho do arquivo gerado,
+ * visto que as versões mais recentes do JS apresentam formas mais enxutas de
+ * escrever o código.
+*/
