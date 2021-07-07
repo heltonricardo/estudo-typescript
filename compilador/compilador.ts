@@ -24,19 +24,39 @@ console.log(canal)
  * escrever o código.
  */
 
-/********************************* SOURCEMAP **********************************/
+/********************************* SOURCE MAP *********************************/
 /* Essa propriedade habilita a geração do arquivo sourcemap (.map). Esse
  * arquivo permite que tenhamos acesso ao código original que deu acesso ao JS
  * que está executando em uma página. Para isso, utilize o DevTools (F12) no
  * browser > Source. Nas pasta terá, além do JS, o arquivo TS.
  */
 
-/******************************* NOIMPLICITANY ********************************/
+/****************************** NO IMPLICIT ANY *******************************/
 /* Liga ou desliga o erro sobre quando uma variável recebe implicitamente o tipo
  * any. O valor por padrão é true. Descomentando a propriedade, a definimos com
  * o valor false para que o código abaixo não apresente erros:
  */
 
-function soma(a, b) {
-  return a + b;
-}
+// function soma(a, b) {
+//   return a + b;
+// }
+
+/***************************** STRICT NULL CHECKS *****************************/
+/* Liga ou desliga o aviso sobre o erro de uso de variável quando existe algum
+* fluxo anterior em que ela não é setada. Por exemplo:
+*/
+
+// function saudar(isManha: boolean): string {
+  //   let saudacao: string
+  //   if (isManha) saudacao = "Bom dia!"
+  //   console.log(saudacao);
+  // }
+  
+/****************** NO UNUSED PARAMETERS & NO UNUSED LOCALS *******************/
+/* Liga ou desliga os avisos sobre o erro de uso de parâmetros declarados e não
+ * usados e variáveis declaradas e não usadas, respectivamente:
+*/
+
+// function foo(n: number) {
+//   let m = 1;
+// }
