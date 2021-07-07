@@ -8,11 +8,10 @@
  * método apresentado no arquivo de instruções.
  */
 
-let canal: string = "Código Fonte TV"
-let inscritos: number = 350000
-
+// let canal: string = "Código Fonte TV"
+// let inscritos: number = 350000
 // canal = inscritos <- Erro
-console.log(canal)
+// console.log(canal)
 
 /*********************************** TARGET ***********************************/
 /* A propriedade "target" no tsconfig, refere-se para qual versão do JavaScript
@@ -60,3 +59,15 @@ console.log(canal)
 // function foo(n: number) {
 //   let m = 1;
 // }
+
+/****************************** OUTPUT DIRECTORY ******************************/
+/* A propriedade outDir define onde os arquivos js serão gerados a partir do
+ * processamento. O padrão é o mesmo diretótio do arquivo TS ("./").
+ */
+
+/******************************** OUTPUT FILE *********************************/
+/* Essa propriedade permite que definamos o caminho de um único arquivo que
+ * conterá todo o código, de todos os aquivos TS. Essa opção é incompatível com
+ * a propriedade "module": "commonjs", sendo necessário definir essa como:
+ * "module": "system".
+ */
