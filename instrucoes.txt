@@ -1,5 +1,8 @@
 Instale o Typescript de forma global: npm i -g typescript
 
+Para criar um arquivo TS de configuração use o seguinte comando na raíz do
+projeto: tsc --init
+
 Para transformar o arquivo ts em js use: tsc arquivo.ts
 
 Para executar o arquivo js use: node arquivo.js
