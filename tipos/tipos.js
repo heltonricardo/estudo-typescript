@@ -1,15 +1,15 @@
 "use strict";
-var nome = "Helton";
+let nome = "Helton";
 console.log(nome);
-var idade = 27;
+let idade = 27;
 idade = 27.5;
-var umaFlag = true;
-var id;
+let umaFlag = true;
+let id;
 id = 123;
 id = "Meu Id é 123";
-var hobbies = ["Cozinhar", "Praticar Esportes", true];
+let hobbies = ["Cozinhar", "Praticar Esportes", true];
 hobbies = [100];
-var endereco = ["Av. Principal", 123];
+let endereco = ["Av. Principal", 123];
 var Cor;
 (function (Cor) {
     Cor[Cor["cinza"] = 0] = "cinza";
@@ -19,8 +19,8 @@ var Cor;
     Cor[Cor["amarelo"] = 0] = "amarelo";
     Cor[Cor["vermelho"] = 1] = "vermelho";
 })(Cor || (Cor = {}));
-var minhaCor = Cor.vermelho;
-var carro = "BMW";
+let minhaCor = Cor.vermelho;
+let carro = "BMW";
 carro = { marca: "BMW", cor: "branca" };
 function retornaMeuNome() {
     return nome;
@@ -34,40 +34,40 @@ function multiplicar(numA, numB) {
     return numA * numB;
 }
 console.log(multiplicar(2, 10));
-var calculo;
+let calculo;
 calculo = multiplicar;
 console.log(calculo(2, 3));
-var usuario = {
+let usuario = {
     senha: "123456",
     nome: "Ricardo",
 };
-var funcionario = {
+let funcionario = {
     supervisores: ["Valdir", "Carlos", "Felipe"],
-    baterPonto: function (hora) {
+    baterPonto(hora) {
         return hora <= 8 ? "Ponto normal" : "Fora do horário";
     },
 };
 console.log(funcionario.supervisores);
 console.log(funcionario.baterPonto(7));
 console.log(funcionario.baterPonto(9));
-var funcionario1 = {
+let funcionario1 = {
     supervisores: ["Valdir", "Carlos", "Felipe"],
-    baterPonto: function (hora) {
+    baterPonto(hora) {
         return hora <= 8 ? "Ponto normal" : "Fora do horário";
     },
 };
-var nota;
+let nota;
 nota = 10;
-console.log("Minha nota \u00E9 " + nota);
+console.log(`Minha nota é ${nota}`);
 nota = "10";
-console.log("Minha nota \u00E9 " + nota);
+console.log(`Minha nota é ${nota}`);
 function falha(msg) {
     throw new Error(msg);
 }
-var produto = {
+const produto = {
     nome: "Sabão",
     preco: 1,
-    validarProduto: function () {
+    validarProduto() {
         if (!this.nome || this.nome.trim().length === 0) {
             falha("Precisa ter um nome");
         }
@@ -77,22 +77,22 @@ var produto = {
     },
 };
 produto.validarProduto();
-var altura;
+let altura;
 altura = 13;
 altura = null;
-var contato1 = {
+const contato1 = {
     nome: "Fulano",
     tel1: "987654321",
     tel2: null,
 };
-var podeSerNulo = null;
-var contaBancaria = {
+let podeSerNulo = null;
+let contaBancaria = {
     saldo: 3456,
-    depositar: function (valor) {
+    depositar(valor) {
         this.saldo += valor;
     },
 };
-var correntista = {
+let correntista = {
     nome: "Ana Silva",
     contaBancaria: contaBancaria,
     contatos: ["34567890", "98765432"],
